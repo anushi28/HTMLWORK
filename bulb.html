@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img1" src="https://e7.pngegg.com/pngimages/922/441/png-clipart-creative-bulb-lightbulb-energy-saving-lamps-thumbnail.png" alt="">
+
+<img id="img2" src="https://i.pinimg.com/originals/e0/fd/25/e0fd25f9127a9a109a0648c83ee61643.png" alt="">
+
+<br>
+<button id="on">on</button>
+<button id="off">off</button>
+
+
+    <style>
+        #img1{
+            height: 400px;
+            width: 300px;
+            position: relative;
+            left: 500px;
+            top: 200px;
+
+        }
+
+        #img2{
+            height: 400px;
+            width: 300px;
+            position: relative;
+            left: 190px;
+            top: 200px;
+
+        }
+
+        #on{
+            position: relative;
+            left: 500px;
+            top: 250px;
+            width: 80px;
+            height: 40px;
+        }
+
+        #off{
+            position: relative;
+            left: 600px;
+            top: 250px;
+            width: 80px;
+            height: 40px;
+            
+        }
+    </style>
+
+    <script>
+        let img1 = document.getElementById("img1");
+        let img2 = document.getElementById("img2");
+        let on = document.getElementById("on");
+        let off = document.getElementById("off");
+
+        on.addEventListener("click",function(){
+            img2.style.display = "none";
+        })
+
+        off.addEventListener("click",function(){
+            img2.style.display = "inline-block";
+        })
+
+
+
+
+    </script>
+
+</body>
+
+
+</html>

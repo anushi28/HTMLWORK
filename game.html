@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div id="child"></div>
+    </div>
+    <button id="play">run                      
+
+
+
+
+
+
+
+
+
+
+          
+    </button>
+<br>
+    <input type="range" name="" id="inp">
+    <span id="count">0</span>
+</body>
+<script>
+// let range = document.getElementById("inp");
+// let count = document.getElementById("count");
+// range.value = 0
+// range.addEventListener("input", ()=>{
+// count.textContent = range.value;
+
+// })
+
+// range.value = 0
+// setInterval(()=>{
+//     range.value++;
+//     count.innerHTML = range.value
+// }, 100)
+
+
+</script>
+<style>
+    .container{
+        width: 300px;
+        height: 300px;
+        background-color: black;
+    }
+    #child{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(235, 216, 216);
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    #play{
+        margin: 20px;
+    }
+</style>
+<script>
+//     document.addEventListener("DOMContentLoaded", ()=>{
+//         // let game ={
+
+//         // }
+//         let play = document.getElementById("play");
+//         let child = document.getElementById("child");
+//         let count = 1;
+//         play.addEventListener("click", ()=>{
+//             if(count ===1){
+//                 child.style.top = '83.5%';
+//                 child.style.left = '83.5%';
+//                 child.style.transition = '2s';
+//             }
+            
+//             if(count ===2){
+//                 child.style.top = '83.5%';
+//                 child.style.left = '0%';
+//                 child.style.transition = '2s';
+//             }
+            
+//             if(count ===3){
+//                 child.style.top = '0%';
+               
+//                 child.style.left = '83.5%';
+//                 child.style.transition = '2s';
+//             }
+// count++;
+          
+//         }) 
+//     })
+
+document.addEventListener("DOMContentLoaded", () => {
+        let play = document.getElementById("play");
+        let child = document.getElementById("child");
+
+        play.addEventListener("click", () => {
+            // Generate random values between 0 and 83.5 for top and left
+            let randomTop = Math.floor(Math.random() * 83.5) + "%";
+            let randomLeft = Math.floor(Math.random() * 83.5) + "%";
+            // let randomRight = Math.floor(Math.random() * 83.5) + "%";
+            // let randomBotton = Math.floor(Math.random() * 83.5) + "%";
+
+            // Apply the random values and set the transition
+            child.style.top = randomTop;
+            child.style.left = randomLeft;
+            // child.style.left = randomRight;
+            // child.style.left = randomBotton;
+            child.style.transition = '1s';
+        });
+    });
+
+
+    // Function that returns a Promise after a delay
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+// Asynchronous function using async/await
+async function exampleAsyncFunction() {
+  await console.log('Start');
+
+  // Using await to wait for the promise to resolve
+  await delay(2000);
+  console.log('After 2 seconds');
+
+  await delay(1000);
+  console.log('After another second');
+
+  await console.log('End');
+}
+
+// Calling the asynchronous function
+exampleAsyncFunction();
+
+</script>
+</html>

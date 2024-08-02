@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = {
+        name : 'neha',
+        age : 56,
+        contact : 457689,
+        company : "SIH",
+    
+    
+    }
+   
+    for (let a in data){
+        document.write( a + ":" + data[a] + "<br>")
+        
+    }
+
+
+    let car = {make: 'toyota',model:'camry',year : '2021'};
+    console.log(car.make);
+    console.log(car.year);
+    
+    for (let b in car){
+        document.write( b + ":" + car[b] + "<br>")
+        
+    }
+
+
+// using WITH to simplify property access
+let user = {fname:'john',lname: 'doe',age:'20'};
+with(user){
+    document.write(fname + ' ' + lname + ' is ' + age + ' year old. ')
+}
+
+
+    </script>
+    
+</body>
+</html>

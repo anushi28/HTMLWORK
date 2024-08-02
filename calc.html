@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+</head>
+<body>
+    <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div>
+        <div>
+            <input type="text" readonly id="calc"> <br> 
+       
+      <button onclick="a(1)" id="ab">1</button> 
+      <button onclick="a(2)" id="ab">2</button> 
+      <button onclick="a(3)" id="ab">3</button> 
+      <button onclick="a(4)" id="ab">4</button><br> 
+      <button onclick="a(5)" id="ab">5</button> 
+      <button onclick="a(6)"id="ab">6</button> 
+      <button onclick="a(7)"id="ab">7</button> 
+      <button onclick="a(8)"id="ab">8</button><br> 
+      <button onclick="a(9)"id="ab">9</button> 
+      <button onclick="a(0)"id="ab">0</button>  
+   
+   
+   
+      <button onclick="b('+')"  id="ab" style="background-color: black;color: aliceblue;">+</button> 
+      <button onclick="b('-')"  id="ab"  style="background-color: black;color: aliceblue;">-</button><br> 
+      <button onclick="b('*')"  id="ab" style="background-color: black;color: aliceblue;">*</button> 
+      <button onclick="b('/')"  id="ab" style="background-color: black;color: aliceblue;">/</button>  
+   
+      <button onclick="cal()" style="width: 125px; height: 5.8vh;background-color: black;color: aliceblue;border-radius: 5px; position: relative;top: -1.5px;">=</button> 
+  </div> 
+  </div>
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat"></a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems);
+  });
+
+  let inp = document.getElementById('calc') 
+    function a(num){ 
+    inp.value += num 
+    } 
+    function b(opp){ 
+    inp.value +=opp 
+    } 
+    function cal(){ 
+    let ans = eval(inp.value) 
+    inp.value = ans 
+    }
+
+  </script>
+    
+</body>
+</html>

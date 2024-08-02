@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script></script>
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="" onsubmit="return validateForm()" >
+        <label>Name:</label>
+         <input type="text" name="fname">
+        Email: <input type="email" name="mail">
+        <input type="submit" >
+        </form>
+        <script>
+             function validateForm() {
+         var name = document.forms["myForm"]["fname"].value;
+         var email = document.forms["myForm"]["mail"].value;
+            if (name == "" ) {
+              alert( " name must be filled out");
+              return false;
+            }
+            else if (email == ""){
+              alert( " email must be filled out");
+              return false;
+
+            }
+            
+          }
+
+        </script>
+       
+</body>
+
+</html>
